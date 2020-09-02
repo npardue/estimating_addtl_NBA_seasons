@@ -18,8 +18,8 @@ Create a model that can accurately predict the amount of additional seasons a pl
 
 ### Data Sets
 Sourced Data
-- [Basketball Reference]: Player Production Stats
-- [Kaggle]: Draft Year, Height & Weight
+- [Basketball Reference]: Player Production Stats for the [Raw Data]
+- [Kaggle]: Draft Year, Height & Weight for the [Clean Draft, Height & Weight Data]
 
 [Cleaned Data] 
 
@@ -92,29 +92,54 @@ I analyzed a dataset of over 6k NBA player entries from the 1996-97 to 2018-19 s
 
 
 ### Reproducing Our Results
-Download the [Raw Data], and then follow along with the [Executive Notebook] to produce a copy of the results.
+Download the [Cleaned Data], and then follow along with the [Executive Notebook] to produce a copy of the results.
 
 ### Repo Navigation
 ```
-├── Images
+├── data
+│   ├── clean (child folders contain cleaned .csv files from the years 1989-2019, pertaining to child-name-related stats)
+│   │   ├── draft (draft, height & weight info)
+│   │   ├── play-36
+│   │   ├── play-advanced
+│   │   ├── reg-36
+│   │   ├── reg-advanced
+│   │   ├── regseason
+│   │   └── glossary.txt
+│   ├── combined
+│   │   └── many .csv files of combined regular season and playoff data
+│   ├── final
+│   │   └── final_df.csv
+│   ├── raw (child folders contain raw .csv files from the years 1989-2019, pertaining to child-name-related stats)
+│   │   ├── draft (draft, height & weight info)
+│   │   ├── play-36
+│   │   ├── play-advanced
+│   │   ├── reg-36
+│   │   ├── reg-advanced
+│   │   ├── regseason
+│   │   └── .DS_Store
 │   ├── .DS_Store
-│   ├── genre_num.png
-│   ├── genre_rating.png
-│   ├── nextflik.jpeg
-│   ├── pop_movies.png
-│   ├── results.png
-│   ├── rmse.png
-│   └── user_ratings.png
+│   ├── cleaning_script.py
+│   └── glossary.txt
 │
-├── .DS_Store
+├── images
+│   ├── .DS_Store
+│   ├── Many Images in Alphabetical Order
+│   ├── sources.txt (sources of images)
+│   └── More Images in Alphabetical Order
 │
-├── Movie Recommender.pdf
+├── Cleaning_082620.ipynb
+│
+├── EDA_082620.ipynb
+│
+├── Executive Notebook.ipynb
+│
+├── ModelingMoreFeats_082920.ipynb
+│
+├── NBA Career Length.pdf (presentation)
 │
 ├── README.md
 │
-├── data.zip
-│
-└── index.ipynb
+└── nohup.out
 
 ```
 
@@ -125,11 +150,12 @@ Sources can be found [here].
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
   
-   [presentation]: <https://github.com/danhales/mod-4-project/blob/master/Movie%20Recommender.pdf>
+   [presentation]: <https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/NBA%20Career%20Length.pdf>
    [basketball reference]: <https://www.basketball-reference.com/>
+   [clean draft, height & weight data]: <https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/data/clean/draft/all_seasons.csv>
    [kaggle]: <https://www.kaggle.com/justinas/nba-height-and-weight-analysis/notebook?select=all_seasons.csv>
-   [cleaned data]: <https://github.com/danhales/mod-4-project/blob/master/data.zip>
-   [raw data]: <https://grouplens.org/datasets/movielens/>
-   [executive notebook]: <https://github.com/danhales/mod-4-project/blob/master/index.ipynb>
-   [here]: <https://grouplens.org/datasets/movielens/>
+   [cleaned data]: <https://github.com/npardue/estimating_addtl_NBA_seasons/tree/master/data/final>
+   [raw data]: <https://github.com/npardue/estimating_addtl_NBA_seasons/tree/master/data/raw>
+   [executive notebook]: <https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/Executive%20Notebook.ipynb>
+   [here]: <https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/sources.txt>
 
