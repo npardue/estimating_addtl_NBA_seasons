@@ -25,7 +25,7 @@ Sourced Data
 
 
 ### Cleaned Data Description
-I analyzed a dataset of over 6k NBA player entries from the 1996-97 to 2018-19 seasons. Each entry contained 147 variables that fell into the following categories:
+I analyzed a dataset of over 6k NBA player entries from the 1996-97 to 2018-19 seasons. Each entry contained 147 variables that fell into the following categories, with more detailed descriptions found in the [Glossary]:
  - Age
  - Mileage Stats from Reg. Season and Playoffs
     - Games Played, Minutes Played.
@@ -156,6 +156,7 @@ Sources can be found [here].
    [kaggle]: <https://www.kaggle.com/justinas/nba-height-and-weight-analysis/notebook?select=all_seasons.csv>
    [cleaned data]: <https://github.com/npardue/estimating_addtl_NBA_seasons/tree/master/data/final>
    [raw data]: <https://github.com/npardue/estimating_addtl_NBA_seasons/tree/master/data/raw>
+   [glossary]: <https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/data/glossary.txt>
    [executive notebook]: <https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/Executive%20Notebook.ipynb>
    [here]: <https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/sources.txt>
 
