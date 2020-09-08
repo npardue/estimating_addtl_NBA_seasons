@@ -74,11 +74,19 @@ I analyzed a dataset of over 6k NBA player entries from the 1996-97 to 2018-19 s
  ![test_act_v_pred.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/test_act_v_pred.png)
  
  ##### Figure 3: Prominent Features 
- - After seeing how badly overfit the model was to the test data, I wanted to look into which features were important. Upon looking at the values for each of the 147 features, it looks like I flooded the model with far too many redundant features. On the bright side, this means that I have a solid list of features to cut out from the next iteration of my model. Shown below are the top 20 features in order of importance in predicting additional seasons a player may have. Predictably, many are related to a player's age (Age, season, current_year & draft_year), minutes and games played, percentage of a team's shots taken, and stats relating to a player's offensive and defensive win shares.
+ - After seeing how badly overfit the model was to the test data, I wanted to look into which features were important. Upon looking at the values for each of the 147 features, it looks like I flooded the model with far too many redundant features. On the bright side, this means that I have a solid list of features to cut out from the next iteration of my model. Shown below are the top 20 features in order of importance in terms of reducing RMSE while predicting additional seasons a player may have. Predictably, many are related to a player's age (Age, season, current_year & draft_year), minutes and games played, percentage of a team's shots taken, and stats relating to a player's offensive and defensive win shares. 
  
  ![top_features.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/top_features.png)
+ 
+ - Another thing that was looked into was the permutation importance of each feature. Essentially, this is how much more inaccuracy the predictions would be if X feature was removed. The permutation importance seems to follow the same trend as the above feature importance, in that features relating to a player's age have the most impact on the predictions, with features relating to offensive production following behind ('2P' field goals attempted, Free Throws attempted, points scored, overall field goals attempted), with amount of time played each season and amount of wins contributed to the team also among the top spots.
+ 
+ ![perm_imp.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/perm_imp.png)
 
-
+### Recommendations
+With this model, players and their agents can take the predicted additional seasons value into contract negotiations. Depending on the prediction, there are a few possible situations they may find themselves in: 
+- Status Quo: If the model predicts somewhere in the range of 2-4 seasons left, I would suggest going about business as usual-- bringing up the estimation if the team tries offering a 1 year contract, or a 2 year contract with the second being a team option.
+- More Aggressive: Take some risk if there's a prediction of 4+ seasons left. There may be an opporutity to increase a contract length to the 3-4 year range if the prediction is above 4 seasons, with an increasing chance the further past 4 seasons it is.
+- Conservative: If the model predicts somewhere in the range of 0-2 seasons left, I would suggest not bringing up the prediction and going into the negotiation trying to shoot for any contract.
 
 
 ### Limitations
