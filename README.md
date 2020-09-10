@@ -78,16 +78,20 @@ I analyzed a dataset of over 6k NBA player entries from the 1996-97 to 2018-19 s
  
  ![top_features.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/top_features.png)
  
+  ##### Figure 4: Permutation Importance 
  - Another thing that was looked into was the permutation importance of each feature. Essentially, this is how much more inaccuracy the predictions would be if X feature was removed. The permutation importance seems to follow the same trend as the above feature importance, in that features relating to a player's age have the most impact on the predictions, with features relating to offensive production following behind ('2P' field goals attempted, Free Throws attempted, points scored, overall field goals attempted), with amount of time played each season and amount of wins contributed to the team also among the top spots.
  
  ![perm_imp.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/perm_imp.png)
 
-### Recommendations
-With this model, players and their agents can take the predicted additional seasons value into contract negotiations. Depending on the prediction, there are a few possible situations they may find themselves in: 
-- Status Quo: If the model predicts somewhere in the range of 2-4 seasons left, I would suggest going about business as usual-- bringing up the estimation if the team tries offering a 1 year contract, or a 2 year contract with the second being a team option.
-- More Aggressive: Take some risk if there's a prediction of 4+ seasons left. There may be an opporutity to increase a contract length to the 3-4 year range if the prediction is above 4 seasons, with an increasing chance the further past 4 seasons it is.
-- Conservative: If the model predicts somewhere in the range of 0-2 seasons left, I would suggest not bringing up the prediction and going into the negotiation trying to shoot for any contract.
 
+### Recommendations
+As the average error in predictions was just over 2 years, that means a predicted value of 2 years would create an interval of 0-4 possible years left. 
+
+With that in mind, my suggestion for players with a predicted value of 2 or less would be to get ANY contract! These players are either on their way out, or maybe they shouldn’t have been here in the first place. Negotiate like your income depends on it. Maybe leverage some intagibles that you could bring to the team.
+
+Next come players with predictions in the range of 3-5 years, and they should use the prediction to negotiate a contract that is at least 2 years.
+
+Finally for players with predictions above 5 years, they likely won’t even bother with the model as teams are more likely to be chomping at the bit to sign them.
 
 ### Limitations
 - I was unable to include players who went undrafted into the modeling process, as the dataset I used for draft years did not list the year they played their first games.
