@@ -73,7 +73,9 @@ I analyzed a dataset of over 6k NBA player entries from the 1996-97 to 2018-19 s
  - The model was great at predicting career length for players that had between 0-6 years left, and struggled in predicting for careers that lasted beyond that. These results are gone over in further detail in the [Executive Notebook]. 
  
  ![test_act_v_pred.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/test_act_v_pred.png)
+ 
  ![under_five.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/under_five.png)
+ 
  ![ten_plus.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/ten_plus.png)
  
  ##### Figure 3: Prominent Features 
