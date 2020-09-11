@@ -70,8 +70,11 @@ I analyzed a dataset of over 6k NBA player entries from the 1996-97 to 2018-19 s
  
  ##### Figure 2: Tuned Random Forest Results
  - Hypertuning helped reduce the RF models' original issue of overfitting to the training data, producing an R<sup>2</sup> = 0.70, and an RMSE of 2.03 years; however, I was unable to address the test set overfitting to an R<sup>2</sup> = 1.0, and an RMSE of 2.5 years. Shown below are the results for the test set predictions.
+ - The model was great at predicting career length for players that had between 0-6 years left, and struggled in predicting for careers that lasted beyond that. These results are gone over in further detail in the [Executive Notebook]. 
  
  ![test_act_v_pred.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/test_act_v_pred.png)
+ ![under_five.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/under_five.png)
+ ![ten_plus.png](https://github.com/npardue/estimating_addtl_NBA_seasons/blob/master/images/ten_plus.png)
  
  ##### Figure 3: Prominent Features 
  - After seeing how badly overfit the model was to the test data, I wanted to look into which features were important. Upon looking at the values for each of the 147 features, it looks like I flooded the model with far too many redundant features. On the bright side, this means that I have a solid list of features to cut out from the next iteration of my model. Shown below are the top 20 features in order of importance in terms of reducing RMSE while predicting additional seasons a player may have. Predictably, many are related to a player's age (Age, season, current_year & draft_year), minutes and games played, percentage of a team's shots taken, and stats relating to a player's offensive and defensive win shares. 
