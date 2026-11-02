@@ -1,7 +1,7 @@
 
 # Creating a regression model that predicts the amount of seasons an NBA player can be expected to play
 
-##### - Nick Pardue, nickpardue@gmail.com
+##### - Nick Pardue
 
 ### [Presentation]
 
